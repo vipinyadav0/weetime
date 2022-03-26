@@ -1,0 +1,19 @@
+{% extends 'wemeet/index.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<main>
+    <section class="form-container">
+    <img id="logo" src="{% static 'images/chat.png' %}" alt="not loaded">
+        <div>
+            <h1>Welcome to Ask And Tell</h1>
+            <p>A group Video Calling App</p>
+        </div>
+    </section>
+</main>
+
+{% comment %} <h2>Lobby</h2> {% endcomment %}
+
+{% endblock content %}
