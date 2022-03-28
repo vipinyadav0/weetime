@@ -1,61 +1,88 @@
-*{
-    margin: 0;
+* {
+  margin: 0;
 }
 
-:root{
-    --shadow : grey;
+:root {
+  --shadow: grey;
 }
 
-
-body{
-    background-color: aliceblue;
+body {
+  background-color: #1b1919;
 }
 
-#logo{
-    display: block;
-    width: 100px;
-    margin: auto;
+#logo {
+  display: block;
+  width: 100px;
+  margin: auto;
 }
 
-.form-container{
-    letter-spacing: 2px;
-    line-height: 3rem;
-    width: 400px;
-    box-shadow: var(--shadow);
-    background-color: white;
-    padding: 50px;
-    border-radius: 5px;
-    position: fixed;
-    top: 50%;
-    left:50%;
-    transform: translate(-50%, -50%);
+.form-container {
+  letter-spacing: 2px;
+  line-height: 3rem;
+  width: 400px;
+  box-shadow: var(--shadow);
+  background-color: white;
+  padding: 50px;
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* outline: none; */
 }
 
 /* ----------------------- ROOM STYLING ------------------------------- */
 
-#video-streams{
-    display: flex;
-    flex-wrap: wrap;
-    height: 85vh;
-    width: 75%;
-    margin: 0 auto;
-
+#video-streams {
+  display: flex;
+  flex-wrap: wrap;
+  height: 85vh;
+  width: 75%;
+  margin: 0 auto;
 }
 
-.video-containers{
-    flex-basis: 500px;
-    flex-grow: 1;
-    max-height: 100%;
-    min-height: 350px;
+/* // // cobug  */
 
-    border: 1px solid rgb(75, 97, 172, 1);
-    border-radius: 5px;
-    margin: 2px;
-    background-color: rgb(150, 148, 148);
+.video-containers {
+  flex-basis: 500px;
+  flex-grow: 1;
+  max-height: 100%;
+  min-height: 350px;
 
+  /* border: 1px solid rgb(75, 97, 172, 1); */
+  border-radius: 5px;
+  margin: 2px;
+  background-color: rgb(150, 148, 148);
 }
 
-.video-player{
-    height: 100%;
-    width: 100%;
+.video-player {
+  height: 100%;
+  width: 100%;
 }
+
+/* -------------––---------------------- Room Styling | Controls ------------------*/
+
+#controls-wrapper {
+  display: flex;
+  height: 100%;
+  /* width: 100%; */
+  justify-content: center;
+  column-gap: 2em;
+  position: relative;
+
+  bottom: -25px;
+}
+
+.control-icon {
+  width: 43px;
+  height: 95%;
+  /* box-shadow: var(--shadow); */
+  /* background-color: #fff; */
+  cursor: pointer;
+  /* padding: 10x; */
+  /* border-radius: 5px; */
+}
+
+/* #leave-btn{
+    background-color: rgb(255,80,80,1);
+} */
