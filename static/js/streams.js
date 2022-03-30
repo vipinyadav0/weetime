@@ -36,7 +36,7 @@ let joinAndDisplayLocalStram = async () => {
 
   let member = await createMember()
 
-  console.log('member:', member)
+
 
 
   let player = `<div class="video-containers" id="user-container-${UID}">
@@ -58,7 +58,7 @@ let handleUserJoined = async (user, mediaType) => {
   if (mediaType === "video") {
     let player = document.getElementById(`user-container-${user.UID}`);
 
-    var usrname = document.getElementsByTagName('usernname');
+
 
 
     if (player != null) {
@@ -95,6 +95,8 @@ let leaveAndRemoveLocalStream = async () => {
 
   await client.leave();
 
+  deleteMember()
+  
   window.open("/", "_self");
 };
 
@@ -131,12 +133,28 @@ let createMember = async () => {
 
 let getMember  = async (user) => {
   let response = await fetch(`/get_member/?UID=${user.uid}&room_name=${CHANNEL}`)
-  let data = await response.json
+  let data = response.json
   return member
 }
 
+let deleteMember = async () => {
+  let response = await fetch('/delete_member/' , {
+    method : 'POST' ,
+    headers: {
+      'Content-Type' :'application/json'
+    },
+    body : JSON.stringify({'name': NAME , 'room_name': CHANNEL, 'UID': UID})
+  })
+
+  let member = await response.json()
+}
+
+
 joinAndDisplayLocalStram();
+
+window.addEventListener('beforeunload', deleteMember)
 
 document.getElementById("leave-btn").addEventListener("click", leaveAndRemoveLocalStream);
 document.getElementById("camera-btn").addEventListener("click", toggleCamera)
 document.getElementById("mic-btn").addEventListener("click", toggleMic)
+
