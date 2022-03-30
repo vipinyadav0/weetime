@@ -96,7 +96,7 @@ let leaveAndRemoveLocalStream = async () => {
   await client.leave();
 
   deleteMember()
-  
+
   window.open("/", "_self");
 };
 
