@@ -14,6 +14,7 @@ let handleSubmit = async (e) => {
     sessionStorage.setItem('UID', UID)
     sessionStorage.setItem('token', token)
     sessionStorage.setItem('room', room)
+    sessionStorage.setItem('name', name)
 
     window.open('/room/', '_self')
 }
