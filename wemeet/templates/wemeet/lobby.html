@@ -7,14 +7,19 @@
 <main>
     <section class="form-container">
     <img id="logo" src="{% static 'images/chat.png' %}" alt="not loaded">
-        <div>
+        <div id="welcome-message">
             <h1>Welcome to Ask And Tell</h1>
             <p>A group Video Calling App</p>
         </div>
         <form id="form">
             <div class="form-field">
-                <input type="text" name="room", placeholder = "Enter a Room Name" style = "text-transform:uppercase;"/>
+                <input type="text" name="room", placeholder = "Name your room" style = "text-transform:uppercase;"/>
             </div>
+
+            <div class="form-field">
+                <input type="username" name="username", placeholder = "Enter Your Name" style = "text-transform:uppercase;"/>
+            </div>
+
             <div class="form-field">
                 <input type="submit" value = "Join Stream"/>
             </div>
