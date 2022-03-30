@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Source+Code+Pro&display=swap');
+
+
 * {
   margin: 0;
 }
@@ -7,7 +10,11 @@
 }
 
 body {
-  background-color: #1b1919;
+  /* background-color: #1b1919; */
+  background-color: #3762b2;
+  font-family: 'Comfortaa', cursive;
+  font-family: 'Source Code Pro', monospace;
+
 }
 
 #logo {
@@ -16,16 +23,72 @@ body {
   margin: auto;
 }
 
+/* ---------------------- Styling Welcome --------------------*/
+#welcome-message{
+  text-align: center;
+  margin: 20px;
+  line-height: 60px;
+}
+
+#welcome-message h1{
+  font-size: 40px;
+}
+#welcome-message p{
+  font-size: 20px;
+}
+
+.form-field{
+  margin: 20px;
+}
+
+.form-field label{
+  font-size: 16px;
+  line-height: 1.5em;
+}
+
+.form-field input{
+  width: 100%;
+  border: 2px solid rgba(198, 202, 219, 1);
+  border-radius: 4px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.form-field input[type='submit']{
+  background-color: rgba(75, 93, 172, 1);
+  border: none;
+  color: white;
+}
+
+@media screen and (max-width:450px) {
+  #form-container{
+    width: 95%;
+
+  }
+
+  #welcome-message p{
+    font-size: 16px;
+  }
+
+  #welcome-message h1{
+    font-size: 30px;
+  }
+  
+}
+
+
 .form-container {
   letter-spacing: 2px;
   line-height: 3rem;
   width: 400px;
   box-shadow: var(--shadow);
-  background-color: white;
+  background-color: #fff;
   padding: 50px;
   border-radius: 5px;
   position: fixed;
   top: 50%;
+  background-color: rgb(252, 249, 249);
+  box-shadow: 0px 0px 20px 20px #7092e9;
   left: 50%;
   transform: translate(-50%, -50%);
   /* outline: none; */
@@ -48,11 +111,8 @@ body {
   flex-grow: 1;
   max-height: 100%;
   min-height: 350px;
-
-  /* border: 1px solid rgb(75, 97, 172, 1); */
-  border-radius: 5px;
+  border-radius: 10px;
   margin: 2px;
-  background-color: rgb(150, 148, 148);
 }
 
 .video-player {
@@ -86,3 +146,26 @@ body {
 /* #leave-btn{
     background-color: rgb(255,80,80,1);
 } */
+
+#room-name-wrapper{
+  background-color: #7092e9;
+  height: 3rem;
+  text-align: center;
+  padding-top: .5rem;
+  letter-spacing: .1em;
+  font-size: 2.2em;
+  color: rgb(223, 215, 215);
+  /* margin: 0 9em; */
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  /* box-shadow: 0px 0px 20px 20px #40b3a9; */
+}
+
+@media screen and (max-width:510px) {
+  #room-name-wrapper{
+    padding-top: 1em;
+    letter-spacing: normal;
+    font-size: 1.4em;
+  }
+}
+
